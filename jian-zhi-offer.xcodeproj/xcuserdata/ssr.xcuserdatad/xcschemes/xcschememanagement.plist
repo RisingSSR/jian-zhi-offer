@@ -44,6 +44,16 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>R18.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>27</integer>
+		</dict>
+		<key>R22.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
+		</dict>
 		<key>R24.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -107,7 +117,7 @@
 		<key>R48.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>28</integer>
 		</dict>
 		<key>R50.xcscheme_^#shared#^_</key>
 		<dict>
