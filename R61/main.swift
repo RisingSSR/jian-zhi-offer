@@ -10,7 +10,7 @@ import Foundation
 class Solution {
     func isStraight(_ nums: [Int]) -> Bool {
         var set = Set<Int>()
-        var kmin = 0, kmax = 14
+        var kmin = 14, kmax = 0
         for num in nums {
             if num == 0 {
                 continue
@@ -27,5 +27,10 @@ class Solution {
 }
 
 let s = Solution()
-let a = s.isStraight([0,0,2,2,5])
+let a = s.isStraight([1,2,3,4,5])
 print(a)
+
+/**面试题61. 扑克牌中的顺子
+ * See: https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof/
+ * 用set去判断是否出现重复，如果为任意牌则直接跳过，再去判最大最小
+ */
