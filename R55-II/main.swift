@@ -48,3 +48,8 @@ class Solution {
         }
     }
 }
+
+/**剑指 Offer 55 - II. 平衡二叉树
+ * See: https://leetcode.cn/problems/ping-heng-er-cha-shu-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=f22rlgj
+ * 递归知道深度，然后对比深度的大小
+ */
