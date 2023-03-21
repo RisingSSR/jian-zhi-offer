@@ -31,6 +31,36 @@ public class TreeNode {
  *     }
  * }
  */
+
+class Solution {
+    func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
+        if preorder.count == 0 {
+            return nil
+        }
+        let root = TreeNode(preorder[0])
+        var stk = [TreeNode]()
+        stk.append(root)
+        var idx = 0
+        for num in preorder {
+            var node = stk.last!
+            if node.val != inorder[idx] {
+                node.left = TreeNode(num)
+                stk.append(node.left!)
+            } else {
+                while !stk.isEmpty && stk.last!.val == inorder[idx] {
+                    node = stk.last!
+                    let _ = stk.popLast()
+                    idx += 1
+                }
+                node.right = TreeNode(num)
+                stk.append(node.right!)
+            }
+        }
+        return root
+    }
+}
+
+/*
 class Solution {
     func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
         if preorder.count == 0 {
@@ -83,6 +113,7 @@ class Solution {
         return rootNode
     }
 }
+ */
 
 /*
  class Solution {
@@ -129,5 +160,5 @@ class Solution {
 
 /**剑指 Offer 07. 重建二叉树
  * See: https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=f22rlgj
- * 递归建立左子树
+ * 递归建立左子树 https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/solution/mian-shi-ti-07-zhong-jian-er-cha-shu-by-leetcode-s/
  */
